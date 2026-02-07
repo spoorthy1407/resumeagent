@@ -69,3 +69,26 @@ Your frontend URL will be: `https://resumeagent.vercel.app`
 
 - **Database**: For production, use PostgreSQL (Render provides free tier)
 - **Environment Variables**: Never commit `.env` to git (already in `.gitignore`)
+
+---
+
+## Local Testing
+
+### 1. Start Backend
+```bash
+python -m uvicorn app.main:app --reload
+```
+
+### 2. Start Frontend
+```bash
+npm install  # First time only
+npm run dev
+```
+
+### 3. Test the Connection
+1. Open http://localhost:3000
+2. Sign up with email/password
+3. Login to get token
+4. Paste resume text and click "Parse Resume"
+5. Verify response shows structured JSON
+
